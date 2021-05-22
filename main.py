@@ -1,28 +1,47 @@
+# *.py diyerek Python dosyalarını listeleyebilmek için:  
+import glob
 
-#Largest Prime Factor (#3)
-#Question: What is the largest prime factor of the number 600851475143 ?
-a = 5 #asal
-k = 600851475143 #kontrol 
-while True:
-    b = 1 #a nın asal olup olmadığını test etmek için kullanılan sayı
-    for i in range(a):
-        b += 1
-        if a == b and 600851475143 % a == 0:
-            print(a)
-            while k % a == 0:
-                k = k / a
-                print(k)
-        elif a % b == 0:
-            break
-    a += 2
-    if k == 1:
-        break
+# os, yani operating system.
+# İşletim sisteminden dosya özelliklerini alabilmek için.
+# Biz değiştirme zamanını alacağız.
+import os
 
- 
-print("bitti")
-print("Sonuç:", a - 2)
+# Python dosyalarının listesini al.
+python_dosyaları = glob.glob('*.py')
 
+# Değiştirilme zamanına göre sırala (erkenden geçe).
+# lambda kullandım. Fonksiyonel paradigma. Bunlara geleceğiz.
+python_dosyaları.sort(key=lambda x: os.stat(x).st_mtime)
 
+# Listedeki sonuncu eleman son değiştirilen dosyadır.
+son_değiştirilen_dosya = python_dosyaları[-1]
+
+# Son değiştirilen dosya bu dosyaysa sondan ikinci dosyayı seç.
+# Çünkü böyle yapmazsan bu dosya sonsuza kadar kendini çağırır.
+if son_değiştirilen_dosya == 'main.py':
+  son_değiştirilen_dosya = python_dosyaları[-2]
+
+# İstersen bu satırı etkinleştirerek manual override yapabilirsin:
+# (İngilizce hazırlıksın, "manual override" ifadesini öğren.)
+# son_değiştirilen_dosya = 'soru001_fonksiyonel_paradigma.py'
+
+# time.time ile sistem saatini 2 defa okuyacağım.
+# Biri programı çalıştırmadan önce, diğeri sonra.
+# İkisinin farkı programının çalışma süresini verir.
+# timeit modülü bu iş için daha gelişmiş bir yöntem.
+# Ama biz şimdilik böyle yapalım.
+import time
+print('ÇALIŞTIRIYORUM: ' + son_değiştirilen_dosya)
+with open(son_değiştirilen_dosya, 'r') as f:
+  içerik = f.read()
+  baş = time.time()
+  exec(içerik)
+  son = time.time()
+print('BİTTİ')
+# Virgülden sonra 3 haneye yuvarla. Sonrası zaten hiç hassas değil.
+print('%.3f saniye sürdü.' % (son - baş))
+
+"""
 #---------------------------------------------------------#
 
 
@@ -96,3 +115,5 @@ while len(prilist) != 10002:
     print(len(prilist))
     a += 1 
 print("Sonuç:", prilist[10001])
+
+"""

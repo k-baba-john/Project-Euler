@@ -1,4 +1,4 @@
-#Multiples of 3 and 5 (#1)
+# Multiples of 3 and 5 (#1)
 total=0
 a=3 # a'nın özel bir anlamı yok
 
@@ -24,6 +24,7 @@ aday_sayı = 3 # a'nın özel bir anlamı var aslında. Hep vardır.
 while aday_sayı < 1000:
   if aday_sayı % 3 == 0 or aday_sayı % 5 == 0:
     total += aday_sayı
+  aday_sayı += 1 #programa bunu ekledim    
 print(aday_sayı)
 
 # Benim kodum seninkinden daha okunaklı.
