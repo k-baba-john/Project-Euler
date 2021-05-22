@@ -81,6 +81,28 @@ while True:
 palist.sort(reverse = True)
 print("Sonuç:", palist[0])
 
+# 1- Pek okunur değil.
+# `def isPalindrome(number)` diye bir fonksiyon olsa daha okunur olurdu.
+# 2- Niye liste tutuyorsun? Senden sadece en büyük palindromu istiyor.
+# 3- Madem liste tuttun, neden son elemanı almak için ters çeviriyorsun?
+# palist[-1] ile de son elemana ulaşabilirsin.
+# 4- break kullanman ve 999'dan geriye doğru sayman güzel. Fakat...
+# 100×999'un 600×998'den küçük olacağı bariz.
+# Yani önce 2. çarpanı 999'da sabit tutup 1. çarpanı 100'e kadar taraman yanlış.
+# {100,101,...,999}×{100,101,...,999} kümesini büyükten küçüğe taramak için daha hızlı bir yol bul.
+# Zamanını ölçünce daha kısa çıkması gerek.
+# Büyükten küçüğe taradığın için listeye de gerek yok. İlk bulduğun palindrom en büyüktür.
+# 5- Yine ameleliği bilgisayara yaptırıyorsun. 
+# Geçen sefer gösterdiğim gibi matematiksel analiz yap ve bilgisayarın iş yükünü azalt.
+
+# Yenisini yazınca bu kodu silme.
+# Kalitesiz kodlarını da kaydet ki gelecekte karşılaştırabilesin.
+# Ayrıca yenisini çalışma sürelerini de karşılaştırabilmelisin.
+# "Bence hızlı çalışıyordur" demek yetmez
+
+# Bu arada yazdığın koda epey kulp taktım ama güzel olmuş.
+# İlk başladığımız güne kıyasla bile daha okunaklıydı.
+# Mükemmele olabildiğince yaklaşmaya çalışıyorum.
 
 #---------------------------------------------------------#
  
