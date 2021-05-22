@@ -89,11 +89,11 @@ print("Sonuç:", palist[0])
 # 4- break kullanman ve 999'dan geriye doğru sayman güzel. Fakat...
 # 100×999'un 600×998'den küçük olacağı bariz.
 # Yani önce 2. çarpanı 999'da sabit tutup 1. çarpanı 100'e kadar taraman yanlış.
-# {100,101,...,999}×{100,101,...,999} kümesini büyükten küçüğe taramak için daha hızlı bir yol bul.
+# {100,101,...,999}×{100,101,...,999} kümesini büyükten küçüğe taramak için daha hızlı bir yol bulmaya çalış.
 # Zamanını ölçünce daha kısa çıkması gerek.
 # Büyükten küçüğe taradığın için listeye de gerek yok. İlk bulduğun palindrom en büyüktür.
 # 5- Yine ameleliği bilgisayara yaptırıyorsun. 
-# Geçen sefer gösterdiğim gibi matematiksel analiz yap ve bilgisayarın iş yükünü azalt.
+# Geçen sefer gösterdiğim gibi matematiksel analiz yapıp bilgisayarın iş yükünü azaltmaya çalış.
 
 # Yenisini yazınca bu kodu silme.
 # Kalitesiz kodlarını da kaydet ki gelecekte karşılaştırabilesin.
