@@ -1,3 +1,11 @@
+''' 
+Amaç: Replit'te tepedeki "Run ▶" tuşuna bastığında son değiştirdiğin dosyanın çalıştırılması.
+
+Böylece shell'e bir şey yazmayacaksın.
+
+Ayrıca programın çalışma süresini de görüntülüyor.
+'''
+
 # *.py diyerek Python dosyalarını listeleyebilmek için:  
 import glob
 
