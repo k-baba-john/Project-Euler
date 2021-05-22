@@ -94,6 +94,7 @@ print("Sonuç:", palist[0])
 # Büyükten küçüğe taradığın için listeye de gerek yok. İlk bulduğun palindrom en büyüktür.
 # 5- Yine ameleliği bilgisayara yaptırıyorsun. 
 # Geçen sefer gösterdiğim gibi matematiksel analiz yapıp bilgisayarın iş yükünü azaltmaya çalış.
+# Örneğin çok basit bir geliştirme önereyim. Çarpanlardan birinin 920 olamayacağı belli. Çünkü çarpımın son hanesi 0 olurdu. Palindromun da ilk hanesi 0 olurdu. Ama 0'la başlayan sayı yok. Demek ki çarpanlar 10'a bölünemez. Çarpımın palindrom olup olmadığını kontrol etmekle boşuna vakit kaybediyorsun.
 
 # Yenisini yazınca bu kodu silme.
 # Kalitesiz kodlarını da kaydet ki gelecekte karşılaştırabilesin.
