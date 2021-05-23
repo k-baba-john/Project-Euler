@@ -1,6 +1,5 @@
 print(65 * 33 * 15 * 7 + 45 * 66 + 3 + 5 + 6 + 9 + 4950)
 
-
 total = 0
 bolunen_sayı = int(input("Kaça kadar hesaplasın: "))
 for i in range(bolunen_sayı):

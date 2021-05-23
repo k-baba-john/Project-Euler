@@ -81,17 +81,17 @@ while True:
 palist.sort(reverse = True)
 print("Sonuç:", palist[0])
 
-# 1- Pek okunur değil.
-# `def isPalindrome(number)` diye bir fonksiyon olsa daha okunur olurdu.
-# 2- Niye liste tutuyorsun? Senden sadece en büyük palindromu istiyor.
-# 3- Madem liste tuttun, neden son elemanı almak için ters çeviriyorsun?
+# 1- Kodun okunurluğu kötü değil. Ama daha iyi olabilirdi.
+# Döngünün başındaki kısım `def isPalindrome(number)` diye bir fonksiyon olsa daha okunur olurdu.
+# 2- Liste tutmana gerek yok? Senden sadece en büyük palindromu istiyor. `en_büyük` diye bir değişkenin olsa, buldukça güncellesen yeter.
+# 3- Madem liste tuttun, son elemanı almak için ters çevirmene gerek yok?
 # palist[-1] ile de son elemana ulaşabilirsin.
 # 4- break kullanman ve 999'dan geriye doğru sayman güzel. Fakat...
 # 100×999'un 600×998'den küçük olacağı bariz.
 # Yani önce 2. çarpanı 999'da sabit tutup 1. çarpanı 100'e kadar taraman yanlış.
-# {100,101,...,999}×{100,101,...,999} kümesini büyükten küçüğe taramak için daha hızlı bir yol bulmaya çalış.
+# {a×b|a,b∈{100,101,...,999}} kümesini büyükten küçüğe taramak için daha hızlı bir yol bulmaya çalış.
 # Zamanını ölçünce daha kısa çıkması gerek.
-# Büyükten küçüğe taradığın için listeye de gerek yok. İlk bulduğun palindrom en büyüktür.
+# Eğer böyle bir yol bulabilirsen, büyükten küçüğe taradığın için listeye de gerek kalmayacak. İlk bulduğun palindrom en büyüktür.
 # 5- Yine ameleliği bilgisayara yaptırıyorsun. 
 # Geçen sefer gösterdiğim gibi matematiksel analiz yapıp bilgisayarın iş yükünü azaltmaya çalış.
 # Örneğin çok basit bir geliştirme önereyim. Çarpanlardan birinin 920 olamayacağı belli. Çünkü çarpımın son hanesi 0 olurdu. Palindromun da ilk hanesi 0 olurdu. Ama 0'la başlayan sayı yok. Demek ki çarpanlar 10'a bölünemez. Çarpımın palindrom olup olmadığını kontrol etmekle boşuna vakit kaybediyorsun.
